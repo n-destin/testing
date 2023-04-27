@@ -9,7 +9,7 @@ import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
   plugins: [
-    eslint(),
+    // eslint(),
   ],
   css: {
     postcss: {

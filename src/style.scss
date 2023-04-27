@@ -4,16 +4,23 @@ body, html {
     height: 100%;
   }
 
-  
-  .logo {
-    background-image: url('./images/toUse.jpg');
-    width: 100px;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+nav{
 
-  :root {
-    text-size-adjust: 100%;
-  }
-  
+}
+
+.link{
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  margin: none;
+}
+
+.active{
+  color: #05abe0;
+}
+
+ul{
+  display: flex;
+  list-style-type: none;
+}
+
