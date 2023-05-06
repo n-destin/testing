@@ -58,8 +58,8 @@ function Posting(props){
                     <div className="clickedNote">
                         <img src={PostDetails.coverUrl} alt="article Image" className="clickedImage"/>
                         <div className="clickedContent">
-                        <h3>{PostDetails.title}</h3>
-                        <p>{PostDetails.tags}</p>
+                        <reactMarkdown><h3>{PostDetails.title}</h3></reactMarkdown>
+                        <reactMarkdown><p>{PostDetails.tags}</p></reactMarkdown>
                         </div>
                     </div>
                     {/* <button className="delete"><img src={Delete} alt="" className="delete-image"/></button> */}
