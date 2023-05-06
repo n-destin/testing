@@ -1,0 +1,179 @@
+body, html {
+    font-family: "Roboto", sans-serif;
+    background: #9ed5e7;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+.link{
+  color: #87e0fd;
+  text-decoration: none;
+  padding: 1rem;
+  margin: none;
+}
+.active{
+  color: #87e0fd;
+  color: #05abe0;
+}
+
+h3{
+  color: #05abe0;
+  font-size: larger
+}
+
+form{
+  margin: 6rem 30% 0 30%;
+}
+
+label{
+  color: white;
+}
+
+input{
+  border-radius: 3px;
+  width: 30rem;
+  height: 2rem;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+
+textarea{
+  height: 5rem;
+  width: 30rem;
+  border: none;
+
+}
+
+p{
+  color: black;
+}
+
+.button{
+  margin: 1rem 0 0 0 ;
+  width: 8rem;
+  height: 3rem;
+  font-size: 15px;
+  color: #89cde2;
+  border: none;
+}
+
+.button:hover{
+  cursor: pointer;
+  border:1px solid #05abe0;
+}
+
+
+ul{
+  margin: 0;
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  margin-left: 60%;
+}
+
+#Post{
+  background-color: white;
+  width: 15rem;
+  margin: 2rem;
+}
+
+#Post:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 200ms;
+}
+
+
+#posts{
+  display: flex;
+  margin-top: 5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.clickedNote{
+  background-color: white;
+  // margin: 5rem 35% 0 35%;
+  margin: 2rem 35% 0 35%;
+  justify-content: center;
+  width: 30%;
+  height: 50%;
+}
+
+.theImage{
+  height: 1rem;
+  border: none;
+}
+
+button.icon{
+  // margin-left: 35%;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+form.ediContent{
+  color: black;
+  justify-content: center;
+}
+
+
+.delete-image{
+  height: 2rem;
+}
+
+.delete{
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.none{
+  display: none;
+}
+
+.clickedContent{
+  margin: 0 0 0 1rem ;
+}
+
+
+.button-control{
+  margin-left: 35%;
+}
+
+.postImage{
+  width: 15rem;
+  height: 20rem;
+}
+
+.clickedImage{
+  width: 100%;
+  height: 27rem;
+}
+
+.content-note > *{
+  padding: 1rem;
+  margin: none;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .links{
+    margin-left: 0;
+  }
+  
+  .clickedNote{
+    background-color: white;
+    margin: 1.5rem;
+    justify-content: center;
+}
+  .clickedImage{
+    width: 100%;
+    padding: 2.7rem;
+  }
+
+  form{
+    margin: 0;
+  }
+}

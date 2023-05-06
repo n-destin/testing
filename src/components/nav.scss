@@ -1,0 +1,34 @@
+.Navigation{
+    position: sticky;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    height: 6rem;
+    width: 100%;
+    background-color:white;
+}
+
+.icon{
+    margin: 2rem;
+}
+.nav-content{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.icon img{
+    margin: none;
+    height: 2rem;
+}
+
+.link{
+    text-decoration: none;
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .links{
+      margin-left: 0;
+    }
+  }
+
