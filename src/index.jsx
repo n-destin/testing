@@ -9,7 +9,7 @@ const store = configureStore({
 })
 
 
-import App from './components/app';
+import App from './components/App';
 
 const root = createRoot(document.getElementById('main'));
 root.render(
