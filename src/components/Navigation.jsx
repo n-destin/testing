@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from 'react-router-dom'
 import './nav.scss'
-import logo from '/Users/destinniyomufasha/Desktop/CS52/platform-client-n-destin/src/images/sigma.png'
+import logo from '../images/sigma.png'
 
 const Navigation = (props) => {
     return (
