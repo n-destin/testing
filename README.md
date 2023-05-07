@@ -2,7 +2,7 @@
 
 *description*
 
-[[deployed url](https://platform-e3xa.onrender.com/posts)]((http://url-if-deployed-here](https://platform-e3xa.onrender.com/posts))
+[[deployed url](https://platformending.onrender.com/)
 
 ## What Worked Well
 Every API request is working well, the redux operations are also working very well. 
