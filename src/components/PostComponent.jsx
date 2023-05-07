@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import reactMarkdown from "react-markdown";
 import { fetchpost } from "./actions/actions";
-import save  from '/Users/destinniyomufasha/Desktop/CS52/platform-client-n-destin/src/images/save.png'
-import edit from '/Users/destinniyomufasha/Desktop/CS52/platform-client-n-destin/src/images/edit.png'
+import save  from '../images/save.png'
+import edit from '../images/edit.png'
 import { editPost } from "./actions/actions";
 import DeleteIcon from '../images/delete.png'
 import { deletePost } from "./actions/actions";
