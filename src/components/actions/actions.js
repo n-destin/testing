@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux"
 import { Response } from "../../middlewares/services";
 import axios from "axios";
 import { useEffect } from "react";
-const ROOT_URL = 'https://platform.cs52.me/api';
+const ROOT_URL = 'https://destin-posts-api.onrender.com/api';
 const API_KEY = '?key=destin_niyomufasha';
 
 export const ActionTypes = {
@@ -20,7 +20,6 @@ export function createPost (Post, navigate){
         'content': Post.content,
         'coverUrl': Post.coverUrl,
     });
-
     navigate('/posts');
 }
 

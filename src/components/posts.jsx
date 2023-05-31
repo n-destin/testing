@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPosts } from "./actions/actions";
 import Post from "./Post";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "reåact-router-dom";
 
 function Posts (){
 
@@ -11,15 +11,17 @@ function Posts (){
 
     useEffect(() =>{
         console.log('here sending');
-        dispatch(fetchPosts());
+        const fetching = fetchPosts();
+        fetching(dispatch);
     }, []);
 
     const PostsElements = posts.all.map((element)=>{
+        console.log(element);
         const path = `/posts/${element.id}`
         return <Post Post = {element}/>
     })
 
-    useNavigate(0)
+    
     return(
         <div id="posts">
             {PostsElements}

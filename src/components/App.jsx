@@ -16,7 +16,7 @@ function App () {
                     <Route path='/posts' element={< Posts/>} />
                     <Route path='/Newpost' element={< Newpost/>} />
                     <Route path='*' element ={<Fallback />}/>
-                    <Route path='/posts/:id' element={<PostComponent/>} />
+                    <Route path="/posts/:id" element={<PostComponent/>} />
                 </Routes>
             </div>
         </BrowserRouter>
