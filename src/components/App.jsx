@@ -6,6 +6,8 @@ import Fallback from './Fallback';
 import Posts from './posts';
 import Newpost from './Newpost';
 import PostComponent from './PostComponent'
+import Login from './Login';
+import RequireAuth from './authorization';
 
 function App () {
     return(
@@ -13,10 +15,11 @@ function App () {
             <div>
                 <Navigation/>
                 <Routes>
-                    <Route path='/posts' element={< Posts/>} />
-                    <Route path='/Newpost' element={< Newpost/>} />
+                    <Route path='/' element={<Login/>}/>
+                    <Route path='/posts' element={<RequireAuth>< Posts/></RequireAuth>} />
+                    <Route path='/Newpost' element={<RequireAuth>< Newpost/></RequireAuth>} />
                     <Route path='*' element ={<Fallback />}/>
-                    <Route path="/posts/:id" element={<PostComponent/>} />
+                    <Route path="/posts/:id" element={<RequireAuth><PostComponent/></RequireAuth>} />
                 </Routes>
             </div>
         </BrowserRouter>
