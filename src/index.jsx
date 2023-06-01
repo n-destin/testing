@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client';
 import { rootReducer } from './components/reducers/rootReducer';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
+import App from './components/App';
+import { ActionTypes } from './components/actions/actions';
+import { useNavigate } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 
 const store = configureStore({
@@ -18,9 +21,7 @@ if(token){
 }
 
 
-import App from './components/App';
-import { ActionTypes } from './components/actions/actions';
-import { useNavigate } from 'react-router-dom';
+
 
 const root = createRoot(document.getElementById('main'));
 root.render(
