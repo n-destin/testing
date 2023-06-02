@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux"
 import { Response } from "../../middlewares/services";
 import axios from "axios";
 import { useEffect } from "react";
-const ROOT_URL = 'https://destin-posts-api.onrender.com/api';
+export const ROOT_URL = 'https://destin-posts-api.onrender.com/api';
 const API_KEY = '?key=destin_niyomufasha';
 
 export const ActionTypes = {
@@ -14,6 +14,7 @@ export const ActionTypes = {
 // creating a post
 export function createPost (Post, navigate){
     console.log(Post);
+    
     axios.post(`${ROOT_URL}/posts${API_KEY}`, {
         'title':Post.title,
         'tags': Post.tags,

@@ -1,6 +1,9 @@
 import React, {useState}from 'react'
 import {createPost} from './actions/actions'
 import { Link, useNavigate } from 'react-router-dom';
+import holder from '../../src/images/holder.jpg'
+import { uploadImage } from './s3';
+
 
 function Newpost(){
 
@@ -11,6 +14,8 @@ function Newpost(){
     const [Tags, setTags] = useState("");
     const [Content, setContent] = useState("");
     const[coverUrl, setCover]  = useState("");
+
+    const[imagePrev, setImagePrev] = useState({});
 
     const changeCover = (event)=>{
         setCover(event.target.value);
@@ -28,11 +33,29 @@ function Newpost(){
         setTags(event.target.value)
     }
 
+    function onuploadImage (event){
+        // event.preventDefault();
+        const file = event.target.files[0];
+        if(!file) alert('please select a file')
+        const reader = new FileReader();
+        setImagePrev({preview: window.URL.createObjectURL(file), file})
+    }
+    
+
     var toSend = {
         title: Title,
         tags: Tags,
         Content: Content,
         coverUrl: coverUrl
+    }
+
+    function toAWS(file){
+        if(file){
+            uploadImage(file).then(url=>{
+                setCover(url);
+            })
+            createPost(toSend, navigate)
+        }
     }
     
     return(
@@ -60,7 +83,12 @@ function Newpost(){
                 </label>
                 <input className='button' type="submit" name="submit" value="SUBMIT" onClick={(event)=>{
                     event.preventDefault();
-                    createPost(toSend, navigate)}}/>
+                    toAWS(imagePrev.file)}}/>
+
+                <img src={(imagePrev) ? imagePrev : holder} alt="Image-preview" style={{
+                    height: '10rem'
+                }}/>
+                <input type="file" name='coverImage' onChange={onuploadImage} />
             </div>
         </form>
     )

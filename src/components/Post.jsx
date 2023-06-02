@@ -1,9 +1,11 @@
 import React from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
 function Post(props){   
 
+    const [image, setImage] = useState('');
     const navigate  = useNavigate()
     
     return(
