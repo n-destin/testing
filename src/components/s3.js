@@ -18,9 +18,8 @@ function uploadFileToS3(signedRequest, file, url) {
   }
 
 
-  export function uploadImage(file) {
+  export async function uploadImage(file) {
     // returns a promise so you can handle error and completion in your component
-    return getSignedReqeust(file).then((response) => {
-      return uploadFileToS3(response.data.signedRequest, file, response.data.url);
-    });
+    const response = await getSignedReqeust(file);
+    return await uploadFileToS3(response.data.signedRequest, file, response.data.url);
   }  
