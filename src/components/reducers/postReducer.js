@@ -10,6 +10,7 @@ const initialState =  {
 const PostsReducer = produce((draftState, action={})=>{
     switch(action.type){
         case ActionTypes.FETCH_POSTS:
+            console.log('reached here in action');
             draftState.all =  action.payload;
             break;
         case ActionTypes.FETCH_POST:

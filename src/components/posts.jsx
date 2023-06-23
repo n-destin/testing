@@ -7,7 +7,9 @@ import { Link, useNavigate } from "react-router-dom";
 function Posts (){
 
     const dispatch = useDispatch();
-    const posts = useSelector((store) => {return store.posts});
+    const posts = useSelector((store) => {
+        console.log('here');
+        return store.posts});
 
     useEffect(() =>{
         console.log('here sending');
