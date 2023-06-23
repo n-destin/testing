@@ -3,7 +3,6 @@ import axios from "axios";
 
 function getSignedReqeust(file){
     const fileName = encodeURIComponent(file.name);
-    // what does this mean??? 
     return axios.get(`${ROOT_URL}/sign-s3?file-name=${fileName}&file-type=${file.type}`);
 }
 
