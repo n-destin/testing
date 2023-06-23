@@ -6,6 +6,13 @@ body, html {
     margin: 0;
   }
 
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .link{
   color: #87e0fd;
   text-decoration: none;
@@ -102,9 +109,24 @@ ul{
   height: 50%;
 }
 
+.centerContents{
+  align-items: center;
+}
+
+.buttons{
+  margin-left: 45%;
+}
+.buttons > *{
+  margin-left: 14px;
+}
+
 .theImage{
   height: 1rem;
   border: none;
+}
+
+.direct{
+  margin-bottom: 40px;
 }
 
 button.icon{
