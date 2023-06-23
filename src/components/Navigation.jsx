@@ -2,11 +2,9 @@ import React from "react";
 import {NavLink, useNavigate} from 'react-router-dom'
 import './nav.scss'
 import logo from '../images/sigma.png'
-<<<<<<< HEAD
 import { signoutUser } from "./actions/actions";
 import { useDispatch } from "react-redux";
-=======
->>>>>>> d4dddfe787ff835e0e7bb8fec2859adc4bd450be
+
 
 const Navigation = (props) => {
 
